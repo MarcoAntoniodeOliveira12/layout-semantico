@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Estilo do Cabeçalho */
+  header {
+    background-color: #666;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+  }
+  
+  
+  /* Cria duas colunas/caixas que flutuam uma ao lado da outra */
+  nav {
+    float: left;
+    width: 20%;
+    background: #ccc;
+    padding: 20px;
+  }
+  
+  /* Estiliza a lista dentro do menu */
+  nav ul {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 60%;
+    background-color: #f1f1f1;
+    
+  }
+  #imagem{
+  width:20%;
+  height:auto;
+  margin-top: 50px;
+  }
+  
+  /* Limpa floats após as colunas */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Estilo do rodapé */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  #r1{
+  float: left;
+    width: 20%;
+    padding: 20px;
+   font-size: 25px;
+    color: black;  
+    
+  }
+  #r2{
+  float: left;
+    padding: 20px;
+    width: 80%;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+  }
+  
+  /* Layout Responsivo - faz com que as duas colunas/caixas se empilhem uma em cima da outra em vez de uma ao lado da outra, em telas pequenas */
+  @media (max-width: 600px) {
+    nav, article,#r1,#r2 {
+      width: 100%;
+      height: auto;
+    }
+  }
